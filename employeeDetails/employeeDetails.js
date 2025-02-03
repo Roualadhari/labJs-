@@ -6,9 +6,10 @@ const employees = [
   ];
 
    // Function to display all employees
-const totalEmployees = employees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}-${foundEmployee.specialization</p>`).join('');
-document.getElementById('employeesDetails').innerHTML = totalEmployees;
-
+function displayEmployees(){
+    const totalEmployees = employees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
+    document.getElementById('employeesDetails').innerHTML = totalEmployees;
+}
 function calculateTotalSalaries() {
     const totalSalaries = employees.reduce((acc, employee) => acc + employee.salary, 0);
     alert(`Total Salaries: $${totalSalaries}`);
@@ -33,7 +34,7 @@ function findEmployeeById(employeeId) {
 
 function findEmployeeBySpecialization(specialization){
     const foundSpecialization= employees.find(employee=> employee.specialization==specialization);
-    if(findEmployeeBySpecialization('JavaScript')){
+    if(findEmployeeBySpecialization()==='JavaScript'){
         document.getElementById('employeesDetails').innerHTML =`<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}-${foundEmployee.specialization}</p>`;
     }else{
         document.getElementById('employeesDetails').innerHTML = 'no employee has been found with this specialization';
