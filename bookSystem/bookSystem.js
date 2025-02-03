@@ -21,7 +21,7 @@ let books = [];
         }
 
         function showbooks() {
-    const booksDiv = books.map((book, index) => `<h1>book Number: ${index + 1}</h1>
+        const booksDiv = books.map((book, index) => `<h1>book Number: ${index + 1}</h1>
         <p><strong>Book Name: </strong>${book.name}</p>
         <p><strong>Author Name:</strong> ${book.authorName}</p>
         <p><strong>Book Description:</strong> ${book.bookDescription}</p>
@@ -41,4 +41,4 @@ let books = [];
 function deleteBook(index){
     books.slice(index,1);
     showbooks();
-}B
+}
