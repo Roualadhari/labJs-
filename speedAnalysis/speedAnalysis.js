@@ -29,6 +29,11 @@ function startTest() {
             var typedWords = userTypedText.split(/\s+/).filter(function (word) {
                 return word !== "";
             }).length;
+            
+            var totalLength=0;
+            for(let i=0;i<userTypedText.length;i++){
+                totalLength++;
+            }
 
             var wpm = 0; // Default value
 
@@ -39,7 +44,8 @@ function startTest() {
             // Display the results
             var outputDiv = document.getElementById("output");
             outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
-                "<p>Words Typed: " + typedWords + "</p>" +
+            "<p>Total Lenght: "+totalLength+ "</p>"+
+            "<p>Words Typed: " + typedWords + "</p>" +
                 "<p>Time Elapsed: " + timeElapsed.toFixed(2) + " seconds</p>" +
                 "<p>Words Per Minute (WPM): " + wpm + "</p>";
 
