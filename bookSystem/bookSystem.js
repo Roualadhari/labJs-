@@ -38,6 +38,7 @@ function showbooks() {
  }
 
 function deleteBook(){
-    books.slice(0,1);
+    debugger;
+    books.pop();
     showbooks();
 }
