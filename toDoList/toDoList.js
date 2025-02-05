@@ -41,6 +41,9 @@ clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 displayTasks();
 
 function clearAllTasks(){
-    tasks.length=0;
+    console.log(tasks)
+    tasks.splice(0, tasks.length)
+    console.log("----------")
+    console.log(tasks)
     displayTasks();
 }
